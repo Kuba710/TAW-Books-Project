@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-dark navbar-container">
+  <div class="container d-flex flex-column">
+    <a class="navbar-brand text-white" href="#">Biblioteka</a>
+    <div class="collapse navbar-collapse d-flex flex-column" id="navbarNav">
+      <ng-container *ngIf="!isUserAuthenticated()">
+        <button class="btn btn-primary m-1" routerLink="login">Logowanie</button>
+        <button class="btn btn-primary m-1" routerLink="register">Rejestracja</button>
+      </ng-container>
+      <ng-container *ngIf="isUserAuthenticated()">
+        <button 
+          class="btn btn-primary m-1"
+          routerLink="/add"
+          >Dodaj książkę</button>
+        <button 
+          class="btn btn-primary m-1"
+          (click)="signOut()"
+          >Wyloguj</button>
+      </ng-container>
+    </div>
+  </div>
+</nav>

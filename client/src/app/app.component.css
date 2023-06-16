@@ -1,0 +1,12 @@
+.app-container {
+    width: auto;
+    height: 100vh;
+    display: flex;
+}
+
+.app-routings {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-left: 200px;
+}

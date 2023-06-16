@@ -1,0 +1,59 @@
+<div class="container">
+    <div class="row justify-content-center mt-5">
+      <div class="col-12">
+        <form class="form-horizontal" method="post" name="signup" id="signup">
+          <div class="form-group">
+            <label for="loginInput">Login</label>
+            <input 
+              type="text" 
+              class="form-control" 
+              id="loginInput" 
+              name="nameinput"
+              placeholder="Wprowadź nazwę"
+              [(ngModel)]="credentials.name"
+            >
+          </div>
+          <div class="form-group">
+            <label for="emailInput">Email</label>
+            <input 
+              type="email" 
+              class="form-control" 
+              id="emailInput" 
+              name="emailinput"
+              placeholder="Wprowadź adres email"
+              [(ngModel)]="credentials.email"
+            >
+          </div>
+          <div class="form-group mb-1">
+            <label for="passwordInput">Hasło</label>
+            <input 
+              type="password" 
+              name="passwordinput"
+              class="form-control" 
+              id="passwordInput" 
+              placeholder="Wprowadź hasło"
+              [(ngModel)]="credentials.password"
+            >
+          </div>
+          <div class="form-group mb-1">
+            <label for="rePasswordInput">Hasło</label>
+            <input 
+              type="password" 
+              name="repasswordinput"
+              class="form-control" 
+              id="rePasswordInput" 
+              placeholder="Wprowadź hasło ponownie"
+            >
+          </div>
+          <button 
+            (click)="create()"
+            type="submit" 
+            class="btn btn-primary mt-3"
+          >
+            Zarejestruj
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  

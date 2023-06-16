@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="row justify-content-center mt-5">
+      <div class="col-md-12">
+        <form action="post" autocomplete="off" method="POST">
+          <div class="form-group">
+            <label for="loginInput">Login</label>
+            <input 
+              type="text" 
+              class="form-control" 
+              id="loginInput" 
+              name="logininput"
+              placeholder="Wprowadź nazwę"
+              [(ngModel)]="credentials.login"
+            >
+          </div>
+          <div class="form-group mb-1">
+            <label for="passwordInput">Hasło</label>
+            <input 
+              type="password" 
+              class="form-control" 
+              id="passwordInput" 
+              name="passwordinput"
+              placeholder="Wprowadź hasło"
+              [(ngModel)]="credentials.password"
+            >
+          </div>
+          <button 
+            (click)="signIn()"
+            type="submit" 
+            class="btn btn-primary mt-3"
+          >
+          Zaloguj
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
